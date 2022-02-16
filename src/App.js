@@ -1,5 +1,11 @@
+/**
+ * Module dependencies
+ */
 import React from 'react';
 
+/**
+ * Main component
+ */
 const App = () => {
   return (
     <div>
