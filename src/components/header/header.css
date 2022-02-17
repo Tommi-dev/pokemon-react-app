@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.header-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.header-container h1 {
+  color: rgb(0, 0, 0);
+  font-family: 'Saira Condensed', sans-serif;
+  text-align: center;
+}

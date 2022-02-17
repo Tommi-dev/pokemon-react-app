@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.pokemon-container {
+  background-color: rgb(223, 205, 48);
+  max-width: 450px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+
+  background: repeating-linear-gradient(
+  45deg,
+  rgba(223, 206, 48, 0.7),
+  rgb(223, 205, 48, 0.7) 10px,
+  rgb(200, 205, 48, 0.7),
+  rgb(200, 205, 48, 0.7) 12px
+  )
+}
+
+.pokemon-container h1 {
+  color: white;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+.pokemon-container p {
+  color: white;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.pokemon-container button {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+
+  font-size: 1.3rem;
+  background-color: rgb(240, 98, 80);
+  border-color: rgb(0, 0, 0);
+  border-style: dotted;
+}
+
+.pokemon-container button:hover {
+  background-color: rgba(240, 99, 80, 0.747);
+}

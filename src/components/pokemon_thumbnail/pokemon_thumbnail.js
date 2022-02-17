@@ -5,6 +5,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './pokemon_thumbnail.css';
 
 // eslint-disable-next-line no-unused-vars
 const PokemonThumbnail = ({ id, name, images }) => {

@@ -5,6 +5,7 @@
  */
 import React from 'react';
 import SearchBar from '../search_bar/search_bar';
+import './header.css';
 
 const Header = ({ allPokemons }) => {
 

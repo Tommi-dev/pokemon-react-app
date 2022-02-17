@@ -1,0 +1,8 @@
+.pokemongrid-container {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

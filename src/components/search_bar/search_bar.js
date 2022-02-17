@@ -6,6 +6,7 @@
  */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './search_bar.css';
 
 const SearchBar = ({ allPokemons }) => {
 

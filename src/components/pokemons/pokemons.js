@@ -5,6 +5,7 @@
  */
 import React from 'react';
 import PokemonThumbnail from '../pokemon_thumbnail/pokemon_thumbnail';
+import './pokemons.css';
 
 const Pokemons = (props) => {
 

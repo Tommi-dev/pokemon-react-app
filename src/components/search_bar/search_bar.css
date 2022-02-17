@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.searchbar-container h4 {
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgb(221, 0, 0);
+}
+  
+.searchbar-container p {
+  color: rgb(0, 0, 0);
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+}
+  
+  
+.searchbar-container input {
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'Saira Condensed', sans-serif;
+}
+  
+.searchbar-container button {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  background-color: rgb(216, 173, 33);
+  border-color: rgb(0, 0, 0);
+  border-style: dotted;
+}
+  
+.searchbar-container button:hover {
+  background-color: rgb(231, 203, 111);
+}

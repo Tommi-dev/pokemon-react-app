@@ -7,6 +7,7 @@ import React from 'react';
 import {
   useParams, Link
 } from 'react-router-dom';
+import './pokemon.css';
 
 // eslint-disable-next-line no-unused-vars
 const Pokemon = ({ allPokemons, shufflePokemons }) => {
@@ -41,7 +42,7 @@ const Pokemon = ({ allPokemons, shufflePokemons }) => {
   return (
     <div className='pokemon-container' >
 
-      <img src={imageToUse} width={400} height={400} />
+      <img src={imageToUse} width={350} height={350} />
       <h1> {pokemon.name} </h1>
       <p> {pokemon.stats[0].stat.name} {pokemon.stats[0].base_stat} </p>
 
