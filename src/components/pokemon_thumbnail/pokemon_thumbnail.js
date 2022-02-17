@@ -4,6 +4,7 @@
  * Module dependencies
  */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line no-unused-vars
 const PokemonThumbnail = ({ id, name, images }) => {
@@ -21,10 +22,12 @@ const PokemonThumbnail = ({ id, name, images }) => {
   let imageToUse = listOfImages.find(image => image !== null);
 
   return (
-    <div>
-      <h3> {name} </h3>
-      <img src={imageToUse} width={150} height={150} />
-    </div>
+    <Link to={`/${name}`} className='pokemon-thumbnail-container' >
+      <div>
+        <h3> {name} </h3>
+        <img src={imageToUse} width={150} height={150} />
+      </div>
+    </Link >
   );
 };
 
