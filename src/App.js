@@ -1,11 +1,12 @@
 /**
  * Module dependencies
  */
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import pokemonService from './services/pokemon-api';
-import Pokemons from './components/pokemons/pokemons';
-import Pokemon from './components/pokemon/pokemon';
-import Header from './components/header/header';
+const Pokemons = React.lazy(() => import('./components/pokemons/pokemons'));
+const Pokemon = React.lazy(() => import('./components/pokemon/pokemon'));
+const Header = React.lazy(() => import('./components/header/header'));
+import Loader from './components/loader/loader';
 import {
   Route, Routes
 } from 'react-router-dom';
@@ -70,29 +71,31 @@ const App = () => {
 
   return (
     <>
-      <Header allPokemons={allPokemons} />
-      <Routes>
+      <Suspense fallback={<Loader />} >
+        <Header allPokemons={allPokemons} />
+        <Routes>
 
-        <Route
-          path='/:id'
-          element={
-            <Pokemon
-              allPokemons={allPokemons}
-              shufflePokemons={shufflePokemons}
-            />
-          }
-        />
+          <Route
+            path='/:id'
+            element={
+              <Pokemon
+                allPokemons={allPokemons}
+                shufflePokemons={shufflePokemons}
+              />
+            }
+          />
 
-        <Route
-          path='/'
-          element={
-            <Pokemons
-              allPokemons={allPokemons.slice(0, 20)}
-            />
-          }
-        />
+          <Route
+            path='/'
+            element={
+              <Pokemons
+                allPokemons={allPokemons.slice(0, 20)}
+              />
+            }
+          />
 
-      </Routes>
+        </Routes>
+      </Suspense>
     </>
   );
 };
