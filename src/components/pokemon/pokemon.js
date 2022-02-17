@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 // eslint-disable-next-line no-unused-vars
-const Pokemon = ({ allPokemons }) => {
+const Pokemon = ({ allPokemons, shufflePokemons }) => {
 
   /**
    * Find the pokemon to display
@@ -29,6 +29,15 @@ const Pokemon = ({ allPokemons }) => {
 
   let imageToUse = listOfImages.find(image => image !== null);
 
+  /**
+   * Handler
+   */
+  const handleClick = () => {
+
+    shufflePokemons(allPokemons);
+
+  };
+
   return (
     <div className='pokemon-container' >
 
@@ -37,7 +46,7 @@ const Pokemon = ({ allPokemons }) => {
       <p> {pokemon.stats[0].stat.name} {pokemon.stats[0].base_stat} </p>
 
       <Link to={'/'} >
-        <button >Return</button>
+        <button onClick={() => handleClick()} >Return</button>
       </Link>
     </div>
   );

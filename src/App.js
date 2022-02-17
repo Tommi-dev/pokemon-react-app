@@ -57,7 +57,15 @@ const App = () => {
     createPokemonObject(data);
   };
 
-  //console.log('pokemons: ', allPokemons);
+  /**
+   * Updating list of pokemons
+   */
+  const shufflePokemons = (pokemons) => {
+    const newPokemons = [...pokemons];
+    setAllPokemons(newPokemons.sort(() => Math.random() - 0.5));
+  };
+
+  //console.log('pokemons length: ', allPokemons);
 
   return (
     <>
@@ -68,6 +76,7 @@ const App = () => {
           element={
             <Pokemon
               allPokemons={allPokemons}
+              shufflePokemons={shufflePokemons}
             />
           }
         />
