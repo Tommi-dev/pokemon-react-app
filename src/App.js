@@ -4,6 +4,10 @@
 import React, { useEffect, useState } from 'react';
 import pokemonService from './services/pokemon-api';
 import Pokemons from './components/pokemons/pokemons';
+import Pokemon from './components/pokemon/pokemon';
+import {
+  Route, Routes
+} from 'react-router-dom';
 
 /**
  * Main component
@@ -20,7 +24,7 @@ const App = () => {
    */
   useEffect(() => {
     getAllPokemons();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const createPokemonObject = async (result) => {
@@ -56,13 +60,29 @@ const App = () => {
   //console.log('pokemons: ', allPokemons);
 
   return (
-    <div>
+    <>
+      <Routes>
 
-      <Pokemons
-        allPokemons={allPokemons.slice(0, 20)}
-      />
+        <Route
+          path='/:id'
+          element={
+            <Pokemon
+              allPokemons={allPokemons}
+            />
+          }
+        />
 
-    </div>
+        <Route
+          path='/'
+          element={
+            <Pokemons
+              allPokemons={allPokemons.slice(0, 20)}
+            />
+          }
+        />
+
+      </Routes>
+    </>
   );
 };
 
