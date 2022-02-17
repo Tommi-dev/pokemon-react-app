@@ -67,7 +67,6 @@ const App = () => {
     setAllPokemons(newPokemons.sort(() => Math.random() - 0.5));
   };
 
-  //console.log('pokemons length: ', allPokemons);
 
   return (
     <>
