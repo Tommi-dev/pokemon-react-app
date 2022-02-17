@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import pokemonService from './services/pokemon-api';
 import Pokemons from './components/pokemons/pokemons';
 import Pokemon from './components/pokemon/pokemon';
+import Header from './components/header/header';
 import {
   Route, Routes
 } from 'react-router-dom';
@@ -69,6 +70,7 @@ const App = () => {
 
   return (
     <>
+      <Header allPokemons={allPokemons} />
       <Routes>
 
         <Route
