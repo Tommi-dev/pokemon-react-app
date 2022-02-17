@@ -8,6 +8,7 @@ const getAllPokemons = async () => {
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
     },
+    mode: 'cors'
   });
 
   if (response.status !== 200) {
@@ -22,6 +23,7 @@ const getAllPokemons = async () => {
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
     },
+    mode: 'cors'
   });
 
   if (response.status !== 200) {
@@ -40,6 +42,7 @@ const getPokemon = async (pokemon) => {
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
     },
+    mode: 'cors'
   });
 
   if (response.status !== 200) {
