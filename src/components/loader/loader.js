@@ -2,7 +2,7 @@
  * Module dependencies
  */
 import React from 'react';
-import './Loader.css';
+import './loader.css';
 
 const Loader = () => {
   return (
