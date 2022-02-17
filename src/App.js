@@ -3,6 +3,7 @@
  */
 import React, { useEffect, useState } from 'react';
 import pokemonService from './services/pokemon-api';
+import Pokemons from './components/pokemons/pokemons';
 
 /**
  * Main component
@@ -57,9 +58,9 @@ const App = () => {
   return (
     <div>
 
-      {allPokemons.map((obj, i) =>
-        <p key={i} > {obj.name} </p>
-      )}
+      <Pokemons
+        allPokemons={allPokemons.slice(0, 20)}
+      />
 
     </div>
   );
