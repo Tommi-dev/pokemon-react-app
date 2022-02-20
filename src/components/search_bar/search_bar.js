@@ -22,7 +22,7 @@ const SearchBar = ({ allPokemons }) => {
    */
   const handleButton = () => {
 
-    if (!(names.includes(name))) {
+    if (!(names.includes(name.toLowerCase()))) {
       setErrorMessage(`There's no pokemon named "${name}"!`);
     }
 
@@ -43,7 +43,7 @@ const SearchBar = ({ allPokemons }) => {
         onChange={({ target }) => setName(target.value)}
       />
 
-      <Link onClick={handleButton} to={names.includes(name) ? `/${name}` : '/'}>
+      <Link onClick={handleButton} to={names.includes(name.toLowerCase()) ? `/${name.toLowerCase()}` : '/'}>
         <button> Search </button>
       </Link>
     </div>
